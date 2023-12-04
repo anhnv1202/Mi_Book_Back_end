@@ -1,0 +1,19 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "MiBook",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/example": {
+      "get": {
+        "description": "Get example data",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    }
+  }
+}

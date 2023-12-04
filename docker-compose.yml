@@ -1,0 +1,38 @@
+version: '3'
+services:
+  node_app:
+    build: .
+    ports:
+      - "3001:3001"
+    depends_on:
+      - redis
+      - mysql
+    env_file:
+      - .env
+    networks:
+      - my_network
+
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    networks:
+      - my_network
+
+  mysql:
+    image: "mysql:latest"
+    env_file:
+      - .env
+    environment:
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_NAME: ${DATABASE_NAME}
+    ports:
+      - "3306:3306"
+    networks:
+      - my_network
+
+networks:
+  my_network:

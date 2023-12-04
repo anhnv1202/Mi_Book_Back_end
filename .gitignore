@@ -1,0 +1,44 @@
+# Node.js
+node_modules/
+
+# TypeScript
+*.tsbuildinfo
+*.tsbuildinfo.*
+
+# TypeORM
+build/
+migration/
+subscriber/
+entity/
+
+# Editor-related
+.vscode/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+*.swn
+*.swp
+*.idb
+*.ldb
+*.ipch/
+*.npmrc
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+
+# Dependency directories
+/jspm_packages/
+/bower_components/
+/tmp/
+/.pnp/
+.pnp.js

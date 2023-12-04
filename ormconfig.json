@@ -1,0 +1,16 @@
+[
+  {
+    "name": "default",
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "1234",
+    "database": "bookstore",
+    "synchronize": false,
+    "entities": ["src/entities/*.{js,ts}"],
+    "factories": ["src/factories/**/*{.ts,.js}"],
+    "seeds": ["src/seeds/**/*{.ts,.js}"],
+    "migrations": ["src/migrations/*{.ts,.js}"]
+  }
+]
